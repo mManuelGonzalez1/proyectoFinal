@@ -4,9 +4,9 @@
 
 // Paleta de Colores
 $navy-dark:    #141f35;
-$navy-light:   lighten($navy-dark, 15%);
+//$navy-light:   lighten($navy-dark, 15%);
 $brand-red:    #ca2418;
-$red-hover:    darken($brand-red, 10%);
+//$red-hover:    darken($brand-red, 10%);
 $warning-gold: #e9b41a;
 $bg-light:     #f4f6f9;
 $white:        #ffffff;
@@ -45,9 +45,10 @@ body {
     font-family: $font-family;
     color: $text-main;
     -webkit-font-smoothing: antialiased;
+    height: 1000px;
     
     // Espacio extra al final para que la barra inferior móvil no tape el contenido
-    @media (max-width: 991px) {
+    @media (max-width: 1291px) {
         //padding-bottom: 80px; 
     }
 }
@@ -62,61 +63,83 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 // Navbar Superior
-.navbar-industrial {
+.navbar{
+    padding:  1rem 1rem 1rem 1.5rem;
+    position: sticky;
+    right: 0;
+    top: 0px;
     background-color: $navy-dark;
-    padding: 1rem 1.5rem;
     @include shadow-md;
-
+    z-index: 2;
     .navbar-brand {
-        color: $white !important;
+        color: $white;
         font-size: 1.25rem;
         letter-spacing: 0.5px;
-        
-        i { color: $warning-gold; }
+        i { 
+            color: $warning-gold; 
+        }
     }
 
     .nav-link {
-        color: rgba($white, 0.8) !important;
+        //color: rgba($white, 0.8) !important;
         transition: $transition;
         
         &:hover, &.active {
             color: $warning-gold !important;
         }
     }
-}
+    .navbar-brand__title{
+        text-transform: uppercase;
+    }
 
-// Navbar Inferior (Mobile)
-.navbar-bottom-mobile {
-    background-color: $white;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    @include shadow-md;
-
-    .nav-item-mobile {
-        @include flex-center;
-        flex-direction: column;
-        color: $text-muted;
-        text-decoration: none;
-        padding: 0.5rem;
-        transition: $transition;
-
-        i {
-            font-size: 1.5rem;
-            margin-bottom: 2px;
-            transition: transform 0.2s;
-        }
-
-        small {
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        // Estado activo o hover
-        &:hover, &.active {
-            color: $brand-red;
-            i { transform: translateY(-2px); }
+    .profile-container{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        width:120px;
+        justify-content: flex-end;
+        //En media quiery toc cambiar el justify content
+        &__img{
+            border-radius: 50%;
+            border: 1px solid $white;
         }
     }
 }
+
+// Navbar Inferior (Mobile)
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: $white;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    @include shadow-md;
+    .footer-icons-container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+    }
+    .icon__index{
+        color: $brand-red;
+    }
+
+    i {
+        font-size: 1.5rem;
+        margin-bottom: 2px;
+        transition: transform 0.2s;        
+    }
+    .paragraph__icon {
+         font-size: 0.75rem;
+        font-weight: 600;
+    }
+
+        
+}
+
 
 /* ==========================================================================
    5. COMPONENTES DE INTERFAZ (CARDS Y BOTONES)
@@ -136,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
     @include shadow-sm;
     
     &:hover, &:focus {
-        background-color: $red-hover;
+        //background-color: $red-hover;
         color: $white;
         transform: translateY(-2px);
         @include shadow-md;
@@ -158,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
     // Efecto al tocar la card en celular
     &:active {
-        background-color: darken($white, 2%);
+        //background-color: darken($white, 2%);
         transform: scale(0.98);
     }
 
@@ -175,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .kpi-icon {
         font-size: 2.2rem;
-        color: $navy-light;
+        //color: $navy-light;
         margin-bottom: 0.5rem;
     }
 
@@ -192,6 +215,8 @@ h1, h2, h3, h4, h5, h6 {
         color: $text-muted;
         text-transform: uppercase;
         font-weight: 600;
+        text-decoration: none;
+        background-color: #ca2418;
     }
 }
 
@@ -211,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #fafbfc;
 
         &:focus {
-            border-color: $navy-light;
+            //border-color: $navy-light;
             box-shadow: 0 0 0 3px rgba($navy-dark, 0.1);
             background-color: $white;
         }

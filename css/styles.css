@@ -13,6 +13,7 @@ body {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
   color: #2b2b2b;
   -webkit-font-smoothing: antialiased;
+  height: 1000px;
 }
 h1, h2, h3, h4, h5, h6 {
   color: #141f35;
@@ -22,56 +23,71 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    4. COMPONENTES DE NAVEGACIÓN
    ========================================================================== */
-.navbar-industrial {
+.navbar {
+  padding: 1rem 1rem 1rem 1.5rem;
+  position: sticky;
+  right: 0;
+  top: 0px;
   background-color: #141f35;
-  padding: 1rem 1.5rem;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
-.navbar-industrial .navbar-brand {
-  color: #ffffff !important;
+.navbar .navbar-brand {
+  color: #ffffff;
   font-size: 1.25rem;
   letter-spacing: 0.5px;
 }
-.navbar-industrial .navbar-brand i {
+.navbar .navbar-brand i {
   color: #e9b41a;
 }
-.navbar-industrial .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
+.navbar .nav-link {
   transition: all 0.3s ease;
 }
-.navbar-industrial .nav-link:hover, .navbar-industrial .nav-link.active {
+.navbar .nav-link:hover, .navbar .nav-link.active {
   color: #e9b41a !important;
 }
+.navbar .navbar-brand__title {
+  text-transform: uppercase;
+}
+.navbar .profile-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  width: 120px;
+  justify-content: flex-end;
+}
+.navbar .profile-container__img {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
 
-.navbar-bottom-mobile {
+.footer {
+  display: flex;
+  flex-direction: row;
   background-color: #ffffff;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
-.navbar-bottom-mobile .nav-item-mobile {
+.footer .footer-icons-container {
+  width: 80%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #6c757d;
-  text-decoration: none;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
-.navbar-bottom-mobile .nav-item-mobile i {
+.footer .icon__index {
+  color: #ca2418;
+}
+.footer i {
   font-size: 1.5rem;
   margin-bottom: 2px;
   transition: transform 0.2s;
 }
-.navbar-bottom-mobile .nav-item-mobile small {
+.footer .paragraph__icon {
   font-size: 0.75rem;
   font-weight: 600;
-}
-.navbar-bottom-mobile .nav-item-mobile:hover, .navbar-bottom-mobile .nav-item-mobile.active {
-  color: #ca2418;
-}
-.navbar-bottom-mobile .nav-item-mobile:hover i, .navbar-bottom-mobile .nav-item-mobile.active i {
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -90,7 +106,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 .btn-brand:hover, .btn-brand:focus {
-  background-color: rgb(156.4159292035, 27.8761061947, 18.5840707965);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -108,7 +123,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .card-custom:active {
-  background-color: rgb(249.9, 249.9, 249.9);
   transform: scale(0.98);
 }
 .card-custom.border-status-danger {
@@ -127,7 +141,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .kpi-card .kpi-icon {
   font-size: 2.2rem;
-  color: rgb(40.9589041096, 63.4863013699, 108.5410958904);
   margin-bottom: 0.5rem;
 }
 .kpi-card .kpi-number {
@@ -142,6 +155,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #6c757d;
   text-transform: uppercase;
   font-weight: 600;
+  text-decoration: none;
+  background-color: #ca2418;
 }
 
 /* ==========================================================================
@@ -156,7 +171,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fafbfc;
 }
 .form-industrial .form-control:focus, .form-industrial .form-select:focus {
-  border-color: rgb(40.9589041096, 63.4863013699, 108.5410958904);
   box-shadow: 0 0 0 3px rgba(20, 31, 53, 0.1);
   background-color: #ffffff;
 }
