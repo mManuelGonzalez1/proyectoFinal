@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Trabajo - Orden #001</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-industrial sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="detalle-servicio.html">
+                <i class="bi bi-x-lg fs-4 me-3 text-white"></i> 
+                <span>Cancelar / Volver</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container py-4 mb-5">
+        
+        <div class="mb-4">
+            <h4 class="fw-bold">Reporte de Servicio #001</h4>
+            <p class="text-muted"><i class="bi bi-building me-1"></i> Alkosto | Toyota 8FGCU25</p>
+        </div>
+
+        <div class="card card-custom p-3 mb-4 border-top border-warning border-4">
+            <div class="mb-3">
+                <label class="form-label fw-bold text-secondary">Tipo de Servicio</label>
+                <select class="form-select form-select-lg bg-light">
+                    <option value="correctivo" selected>Correctivo</option>
+                    <option value="preventivo">Preventivo</option>
+                    <option value="diagnostico">Diagnóstico</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label fw-bold text-secondary">Horómetro Actual</label>
+                <input type="number" class="form-control form-control-lg bg-light" placeholder="Ej: 4530">
+            </div>
+        </div>
+
+        <div class="accordion mb-4 shadow-sm" id="accordionFormulario">
+            
+            <div class="accordion-item border-0 rounded-top mb-1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChecklist">
+                        <i class="bi bi-card-checklist me-2 text-primary fs-5"></i> 1. Checklist de Inspección
+                    </button>
+                </h2>
+                <div id="collapseChecklist" class="accordion-collapse collapse show" data-bs-parent="#accordionFormulario">
+                    <div class="accordion-body">
+                        <div class="form-check form-switch mb-3 fs-5">
+                            <input class="form-check-input" type="checkbox" id="checkRuedas">
+                            <label class="form-check-label" for="checkRuedas">Estado de las ruedas</label>
+                        </div>
+                        <div class="form-check form-switch mb-3 fs-5">
+                            <input class="form-check-input" type="checkbox" id="checkAceite" checked>
+                            <label class="form-check-label" for="checkAceite">Nivel de aceite de motor</label>
+                        </div>
+                        <div class="form-check form-switch fs-5">
+                            <input class="form-check-input" type="checkbox" id="checkAgua" checked>
+                            <label class="form-check-label" for="checkAgua">Nivel de agua de batería</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 mb-1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRepuestos">
+                        <i class="bi bi-tools me-2 text-primary fs-5"></i> 2. Repuestos Utilizados
+                    </button>
+                </h2>
+                <div id="collapseRepuestos" class="accordion-collapse collapse" data-bs-parent="#accordionFormulario">
+                    <div class="accordion-body bg-light">
+                        <div class="row g-2 mb-3 bg-white p-2 rounded border">
+                            <div class="col-8">
+                                <input type="text" class="form-control form-control-sm border-0" placeholder="Descripción del repuesto" value="Filtro Hidráulico">
+                            </div>
+                            <div class="col-4">
+                                <input type="number" class="form-control form-control-sm border-0 text-center" placeholder="Cant." value="1">
+                            </div>
+                        </div>
+                        <div class="row g-2 bg-white p-2 rounded border">
+                            <div class="col-8">
+                                <input type="text" class="form-control form-control-sm border-0" placeholder="Descripción del repuesto">
+                            </div>
+                            <div class="col-4">
+                                <input type="number" class="form-control form-control-sm border-0 text-center" placeholder="Cant.">
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary btn-sm w-100 mt-2"><i class="bi bi-plus"></i> Agregar línea</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item border-0 rounded-bottom">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrabajo">
+                        <i class="bi bi-clipboard-data me-2 text-primary fs-5"></i> 3. Observaciones
+                    </button>
+                </h2>
+                <div id="collapseTrabajo" class="accordion-collapse collapse" data-bs-parent="#accordionFormulario">
+                    <div class="accordion-body">
+                        <textarea class="form-control bg-light" rows="4" placeholder="Describe la falla encontrada y la solución aplicada..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card card-custom p-3 mb-4">
+            <h6 class="fw-bold text-secondary mb-3"><i class="bi bi-pen me-2"></i>Firma de Conformidad</h6>
+            <div class="bg-light border rounded text-center py-5 mb-3" style="border-style: dashed !important; border-width: 2px !important;">
+                <p class="text-muted mb-0">El cliente firmará aquí</p>
+                <small class="text-muted">(Espacio para Canvas JS)</small>
+            </div>
+            <input type="text" class="form-control form-control-lg mb-2 bg-light" placeholder="Nombre de quien recibe">
+        </div>
+
+        <div class="d-grid mt-4">
+            <button class="btn btn-brand btn-lg py-3 shadow">
+                FINALIZAR HOJA DE TRABAJO
+            </button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

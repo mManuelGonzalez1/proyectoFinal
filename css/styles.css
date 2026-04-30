@@ -1,0 +1,272 @@
+@charset "UTF-8";
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+/* ==========================================================================
+   2. MIXINS (Funciones reutilizables)
+   ========================================================================== */
+/* ==========================================================================
+   3. ESTILOS GLOBALES
+   ========================================================================== */
+body {
+  background-color: #f4f6f9;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: #2b2b2b;
+  -webkit-font-smoothing: antialiased;
+  height: 1000px;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #141f35;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   4. COMPONENTES DE NAVEGACIÓN
+   ========================================================================== */
+.navbar {
+  padding: 1rem 1rem 1rem 1.5rem;
+  position: sticky;
+  right: 0;
+  top: 0px;
+  background-color: #141f35;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.navbar .navbar-brand {
+  color: #ffffff;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+.navbar .navbar-brand i {
+  color: #e9b41a;
+}
+.navbar .nav-link {
+  transition: all 0.3s ease;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #e9b41a !important;
+}
+.navbar .navbar-brand__title {
+  text-transform: uppercase;
+}
+.navbar .profile-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  width: 120px;
+  justify-content: flex-end;
+}
+.navbar .profile-container__img {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.footer .footer-icons-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.footer .icon__index {
+  color: #ca2418;
+}
+.footer i {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+  transition: transform 0.2s;
+}
+.footer .paragraph__icon {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.progress-container__title {
+  color: #141f35;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.progress-container__text {
+  font-size: 1rem;
+}
+.progress-container .bar-container {
+  border: 1px solid red;
+}
+.progress-container .bar-container__percentage {
+  color: #e9b41a;
+}
+.progress-container .progress .progress-bar {
+  background-color: #e9b41a;
+}
+
+.card-custom {
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.card-custom:active {
+  transform: scale(0.98);
+}
+.card-custom.border-status-danger {
+  border-left: 6px solid #ca2418;
+}
+.card-custom.border-status-warning {
+  border-left: 6px solid #e9b41a;
+}
+.card-custom.border-status-navy {
+  border-left: 6px solid #141f35;
+}
+
+.progress-custom {
+  height: 12px;
+  border-radius: 6px;
+  background-color: #e2e8f0;
+}
+.progress-custom .progress-bar {
+  background-color: #e9b41a;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   5. COMPONENTES DE INTERFAZ (CARDS Y BOTONES)
+   ========================================================================== */
+.btn-brand {
+  background-color: #ca2418;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.btn-brand:hover, .btn-brand:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.btn-brand:active {
+  transform: translateY(0);
+}
+
+.kpi-card {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.kpi-card .kpi-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.kpi-card .kpi-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #141f35;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+.kpi-card .kpi-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #ca2418;
+}
+
+/* ==========================================================================
+   6. FORMULARIOS INDUSTRIALES (Inputs, Switches, Accordion)
+   ========================================================================== */
+.form-industrial .form-control, .form-industrial .form-select {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fafbfc;
+}
+.form-industrial .form-control:focus, .form-industrial .form-select:focus {
+  box-shadow: 0 0 0 3px rgba(20, 31, 53, 0.1);
+  background-color: #ffffff;
+}
+.form-industrial label {
+  font-weight: 600;
+  color: #141f35;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-industrial .form-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.form-industrial .form-switch .form-check-input:checked {
+  background-color: #141f35;
+  border-color: #141f35;
+}
+.form-industrial .form-switch .form-check-label {
+  margin-left: 0.5rem;
+  padding-top: 0.2rem;
+  cursor: pointer;
+  text-transform: none;
+  font-size: 1rem;
+}
+
+.accordion-industrial .accordion-item {
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.accordion-industrial .accordion-item .accordion-button {
+  background-color: #ffffff;
+  color: #141f35;
+  font-weight: 700;
+  padding: 1.2rem;
+}
+.accordion-industrial .accordion-item .accordion-button:not(.collapsed) {
+  background-color: #141f35;
+  color: #ffffff;
+}
+.accordion-industrial .accordion-item .accordion-button:not(.collapsed) i {
+  color: #e9b41a !important;
+}
+.accordion-industrial .accordion-item .accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+.accordion-industrial .accordion-item .accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-industrial .accordion-item .accordion-body {
+  background-color: #f4f6f9;
+  padding: 1.5rem;
+}
+
+/* ==========================================================================
+   7. UTILIDADES ESPECÍFICAS
+   ========================================================================== */
+.badge-status {
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
