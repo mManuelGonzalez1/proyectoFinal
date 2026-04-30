@@ -107,38 +107,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-// Navbar Inferior (Mobile)
-.footer{
-    display: flex;
-    flex-direction: row;
-    background-color: red;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    @include shadow-md;
-    .footer-icons-container{
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 0 auto;
-        padding: 1rem 0;
-
-    }
-    .icon__index{
-        color: $brand-red;
-    }
-
-    i {
-        font-size: 1.5rem;
-        margin-bottom: 2px;
-        transition: transform 0.2s;        
-    }
-    .paragraph__icon {
-         font-size: 0.75rem;
-        font-weight: 500;
-    }
-
-        
-}
 .progress-container{
     &__title{
         color: $navy-dark;
@@ -149,7 +117,6 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
     }
     .bar-container{
-        border: 1px solid red;
 
         &__percentage{
         color: #e9b41a;
@@ -226,14 +193,57 @@ h1, h2, h3, h4, h5, h6 {
     
 
 }
+.asigned-container{
+    &__title{
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .schedule{
+        padding: 2rem;
+        margin-bottom: 2rem;
+        &__information{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        .information__badge{
+            font-size: 0.7rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .forklift{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        .forklift-information{
+            width: 100%;
+        }
 
+    }
+    .fork-identification{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 75%;
+        .identification__serial{
+            font-weight: bold;
+        }
+    }
+    .client-report{
+        border: 1px solid red;
+        &__title{
+            text-transform:capitalize;
+            font-size: 0.9rem;
+            display: block;
+        }
+    }
+}
 
-
-/* ==========================================================================
-   5. COMPONENTES DE INTERFAZ (CARDS Y BOTONES)
-   ========================================================================== */
-
-// Botón Principal
 .btn-brand {
     background-color: $brand-red;
     color: $white;
@@ -257,6 +267,42 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(0); // Efecto de presionar
     }
 }
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color:$bg-light;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    @include shadow-md;
+    .footer-icons-container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+    }
+    .icon__index{
+        color: $brand-red;
+    }
+
+    i {
+        font-size: 1.5rem;
+        margin-bottom: 2px;
+        transition: transform 0.2s;        
+    }
+    .paragraph__icon {
+         font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+        
+}
+
+
+
 
 
 // Cards específicas de KPI (Dashboard)
