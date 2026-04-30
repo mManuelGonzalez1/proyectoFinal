@@ -71,7 +71,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $navy-dark;
     @include shadow-md;
     z-index: 2;
-
     .navbar-brand {
         color: $white;
         font-size: 1.25rem;
@@ -227,7 +226,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 // Cards específicas de KPI (Dashboard)
 .kpi-card {
     text-align: center;
@@ -349,7 +347,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    7. UTILIDADES ESPECÍFICAS
    ========================================================================== */
-
 
 
 .badge-status {

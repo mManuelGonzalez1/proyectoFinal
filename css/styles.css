@@ -65,7 +65,11 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
   background-color: red;
+=======
+  background-color: #ffffff;
+>>>>>>> 9c89d36f8d1f6a7d2668105646a71f9f14a8d32a
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -87,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .paragraph__icon {
   font-size: 0.75rem;
+<<<<<<< HEAD
   font-weight: 500;
 }
 
@@ -137,6 +142,9 @@ h1, h2, h3, h4, h5, h6 {
 .progress-custom .progress-bar {
   background-color: #e9b41a;
   border-radius: 6px;
+=======
+  font-weight: 600;
+>>>>>>> 9c89d36f8d1f6a7d2668105646a71f9f14a8d32a
 }
 
 /* ==========================================================================
@@ -163,6 +171,30 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+<<<<<<< HEAD
+=======
+.card-custom {
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.card-custom:active {
+  transform: scale(0.98);
+}
+.card-custom.border-status-danger {
+  border-left: 6px solid #ca2418;
+}
+.card-custom.border-status-warning {
+  border-left: 6px solid #e9b41a;
+}
+.card-custom.border-status-navy {
+  border-left: 6px solid #141f35;
+}
+
+>>>>>>> 9c89d36f8d1f6a7d2668105646a71f9f14a8d32a
 .kpi-card {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -261,6 +293,19 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    7. UTILIDADES ESPECÍFICAS
    ========================================================================== */
+<<<<<<< HEAD
+=======
+.progress-custom {
+  height: 12px;
+  border-radius: 6px;
+  background-color: #e2e8f0;
+}
+.progress-custom .progress-bar {
+  background-color: #e9b41a;
+  border-radius: 6px;
+}
+
+>>>>>>> 9c89d36f8d1f6a7d2668105646a71f9f14a8d32a
 .badge-status {
   padding: 0.4em 0.8em;
   border-radius: 4px;
