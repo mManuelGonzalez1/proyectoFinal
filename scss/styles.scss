@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: $border-rad;
     @include shadow-sm;
     transition: $transition;
-    overflow: hidden; // Para que los bordes de colores no se salgan
+    overflow: hidden;
     // Efecto al tocar la card en celular
     &:active {
         //background-color: darken($white, 2%);
@@ -301,7 +301,59 @@ h1, h2, h3, h4, h5, h6 {
         
 }
 
+// DETALLE DE SERVICIO 
+.contact-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    justify-content:left;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $navy-dark;
+}
+.person-contact{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
+.person-phone{
+    margin-bottom: 0;
+    .contact__phone{
+        font-weight: bold;
+        color: $navy-dark;
+    }
 
+}
+.forklift-data{
+    margin-bottom: 2rem;
+    height: 150px;
+    padding: 2rem;
+}
+.client-report{
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    .alert-container{
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+        width: 100%;
+        margin: 0;
+        .alert-heading{
+            font-size: 1.5rem;
+        }
+
+        i{
+            height: 30px;
+            margin-right: 1rem;
+        }
+        .bi-exclamation-triangle-fill::before{
+                vertical-align: bottom;
+            }
+    }
+}
 
 
 

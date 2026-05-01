@@ -9,36 +9,86 @@
     <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-industrial mb-1">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="agenda.html">
+                    <i class="bi bi-arrow-left fs-4 me-3"></i> 
+                    <p class="mb-0">Detalle de Orden #001</p>
+                </a>
+            </div>
+        </nav><!--Aprobado-->
+</header>
 
-    <nav class="navbar navbar-expand-lg navbar-industrial sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="agenda.html">
-                <i class="bi bi-arrow-left fs-4 me-3"></i> 
-                <span>Detalle de Orden #001</span>
-            </a>
-        </div>
-    </nav>
-
-    <div class="container py-4">
+<main class="container py-4">
         
-        <div class="card card-custom p-4 mb-4">
-            <div class="d-flex align-items-center mb-3">
-                <div class="bg-light p-3 rounded-circle me-3">
-                    <i class="bi bi-building fs-3 text-primary"></i>
-                </div>
+        <!-- Información del cliente -->
+        <section class=" card card-custom p-3 mb-4 ">
+            <div class=" contact-card mb-3">
+                    <i class="bi bi-building p-3 fs-3 text-primary"></i>
                 <div>
                     <h3 class="fw-bold mb-0">Alkosto</h3>
                     <p class="text-muted mb-0">Planta 2 - Zona de Descargue</p>
                 </div>
             </div>
-            <hr>
-            <p class="mb-1"><i class="bi bi-person-badge text-muted me-2"></i> <strong>Contacto:</strong> Ing. Roberto Gómez</p>
-            <p class="mb-0"><i class="bi bi-telephone text-muted me-2"></i> <strong>Teléfono:</strong> 310 555 0192</p>
-        </div>
+            <div class="person-contact">
+                <i class=" contact__icon bi-person-badge text-muted me-2"></i>
+                <p class="contact__job mb-0">Contacto: </p>
+                <p class="contact__name mb-0"> Roberto Gómez</p>
+            </div>
 
-        <h5 class="fw-bold mb-3">Datos del Equipo</h5>
-        <div class="card card-custom p-4 mb-4 border-top border-secondary border-4">
+            <div class="person-contact person-phone">
+                <i class=" contact__icon bi bi-telephone text-muted me-2"></i>
+                <p class="contact__job mb-0">Telefono: </p>
+                <p class="contact__phone mb-0">310 555 0192</p>
+            </div>
+        </section>
+
+        <h2 class="fw-bold mb-3 text-warning">Datos del Equipo</h2>
+        <!--Section 2: Datos tecnicos del equipo-->
+        <section class=" forklift-data card-custom   border-status-warning shadow">
+            <div class="row g-3 align-items-center border-bottom border-warning">
+                <div class="col mt-0">
+                    <p class="fw-bold mb-0">Marca</p>
+                </div>
+                <div class="col mt-0">
+                    <p class="fw-bold mb-0">Modelo</p>
+                </div>
+                <div class="col mt-0">
+                    <p class="fw-bold mb-0">Serial</p>
+                </div>
+            </div>
             <div class="row g-3">
+                <div class="col">
+                    <p class="mb-0">Toyota</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0">1HX30MN</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0">12345678</p>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center border-bottom border-warning">
+                <div class="col">
+                    <p class="fw-bold mb-0">Horometro</p>
+                </div>
+                <div class="col-6">
+                    <p class="fw-bold mb-0">Combustion</p>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col">
+                    <p class="mb-0">12000</p>
+                </div>
+                <div class="col-6">
+                    <p class="mb-0">Electrica Litio</p>
+                </div>
+            </div>
+
+            
+              <!--
                 <div class="col-6">
                     <small class="text-muted d-block">Marca y Modelo</small>
                     <strong class="fs-5">Toyota 8FGCU25</strong>
@@ -55,21 +105,26 @@
                     <small class="text-muted d-block">Combustible</small>
                     <strong class="fs-5">Combustión (Gas)</strong>
                 </div>
-            </div>
-        </div>
+                
+              -->  
+        </section>
 
-        <div class="alert alert-danger shadow-sm border-0 rounded-3 mb-4" role="alert">
-            <h6 class="alert-heading fw-bold"><i class="bi bi-exclamation-triangle-fill me-2"></i>Reporte del Cliente:</h6>
+        <!--Article 1: Reporte del cliente-->
+        <article class="client-report alert alert-danger shadow-sm border-0" role="alert">
+            <div class="alert-container  p-0">
+                <i class="bi bi-exclamation-triangle-fill "></i>
+                <h3 class="alert-heading fw-bold m-0">Reporte del Cliente:</h3>
+            </div>    
             <p class="mb-0">"El mástil pierde fuerza al levantar carga mayor a 1 tonelada. Se escuchan ruidos extraños en el sistema hidráulico. Equipo detenido por seguridad."</p>
-        </div>
+        </article>
 
-        <div class="d-grid mt-5 mb-4">
-            <a href="hoja-trabajo.html" class="btn btn-brand btn-lg py-3 shadow">
-                INICIAR HOJA DE TRABAJO <i class="bi bi-play-circle-fill ms-2"></i>
+        <!--section 3: llamado a la hoja de trabajo-->
+        <section class="d-grid mt-5 mb-4">
+            <a href="hoja-trabajo.html" class="btn btn-brand btn-lg py-3 shadow text-uppercase">
+                Iniciar hoja de trabajo <i class="bi bi-play-circle-fill ms-2"></i>
             </a>
-        </div>
-
-    </div>
+        </section>     
+</main>
 
 </body>
 </html>

@@ -229,6 +229,61 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  justify-content: left;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #141f35;
+}
+
+.person-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+
+.person-phone {
+  margin-bottom: 0;
+}
+.person-phone .contact__phone {
+  font-weight: bold;
+  color: #141f35;
+}
+
+.forklift-data {
+  margin-bottom: 2rem;
+  height: 150px;
+  padding: 2rem;
+}
+
+.client-report {
+  margin-bottom: 2rem;
+  border-radius: 15px;
+}
+.client-report .alert-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  margin: 0;
+}
+.client-report .alert-container .alert-heading {
+  font-size: 1.5rem;
+}
+.client-report .alert-container i {
+  height: 30px;
+  margin-right: 1rem;
+}
+.client-report .alert-container .bi-exclamation-triangle-fill::before {
+  vertical-align: bottom;
+}
+
 .kpi-card {
   text-align: center;
   padding: 1.5rem 1rem;
