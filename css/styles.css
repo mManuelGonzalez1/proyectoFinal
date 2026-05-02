@@ -390,81 +390,67 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f4f6f9;
   padding: 1.5rem;
 }
-
-.kpi-card {
+.work-form .canvas-container {
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #ffffff;
   text-align: center;
-  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
 /* ==========================================================================
-   6. FORMULARIOS INDUSTRIALES (Inputs, Switches, Accordion)
+   7. PERFIL TECNICO
    ========================================================================== */
-.form-industrial .form-control {
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-header .header-img-container {
+  width: 100px;
+  height: 100px;
+  margin-top: 0.5rem;
+}
+.profile-header .header-img-container .header-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   transition: all 0.3s ease;
-  background-color: #fafbfc;
 }
-.form-industrial .form-control:focus {
-  box-shadow: 0 0 0 3px rgba(20, 31, 53, 0.1);
-  background-color: #ffffff;
-}
-.form-industrial label {
-  font-weight: 600;
-  color: #141f35;
-  margin-bottom: 0.4rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.form-industrial .form-switch .form-check-input {
-  width: 3rem;
-  height: 1.5rem;
-  cursor: pointer;
-}
-.form-industrial .form-switch .form-check-input:checked {
-  background-color: #141f35;
-  border-color: #141f35;
-}
-.form-industrial .form-switch .form-check-label {
-  margin-left: 0.5rem;
-  padding-top: 0.2rem;
-  cursor: pointer;
-  text-transform: none;
-  font-size: 1rem;
+.profile-header .header-img-container .header-img:hover {
+  transform: scale(1.05);
 }
 
-.accordion-industrial .accordion-item {
-  border: none;
-  margin-bottom: 0.5rem;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+.performance-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.grid-performance .completed-services, .grid-performance .times-efficiency {
+  text-align: center;
+  height: 100%;
+}
+
+.options-container {
   overflow: hidden;
 }
-.accordion-industrial .accordion-item .accordion-button {
+.options-container .options-list__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.session-close .close-button {
+  width: 100%;
   background-color: #ffffff;
-  color: #141f35;
-  font-weight: 700;
-  padding: 1.2rem;
 }
-.accordion-industrial .accordion-item .accordion-button:not(.collapsed) {
-  background-color: #141f35;
+.session-close .close-button:hover {
+  background-color: #ca2418;
   color: #ffffff;
-}
-.accordion-industrial .accordion-item .accordion-button:not(.collapsed) i {
-  color: #e9b41a !important;
-}
-.accordion-industrial .accordion-item .accordion-button:not(.collapsed)::after {
-  filter: brightness(0) invert(1);
-}
-.accordion-industrial .accordion-item .accordion-button:focus {
-  box-shadow: none;
-}
-.accordion-industrial .accordion-item .accordion-body {
-  background-color: #f4f6f9;
-  padding: 1.5rem;
 }
 
 /* ==========================================================================

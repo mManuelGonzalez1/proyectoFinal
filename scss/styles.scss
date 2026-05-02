@@ -365,7 +365,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .work-form{
-
     .service-information{
     padding: 2rem;
     margin-bottom: 1rem;
@@ -399,10 +398,10 @@ h1, h2, h3, h4, h5, h6 {
                     background-color: $white;
                 }
 
-                }
-    }
+            }
+        }
 
-}
+    }
 .form-control{
         border: 2px solid #e2e8f0;
         border-radius: 8px;
@@ -446,7 +445,6 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 // Acordeón de la Hoja de Trabajo
-
     .accordion-industrial {
     .accordion-item {
         border: none;
@@ -481,114 +479,71 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
-
-}
-
-
-
-
-
-
-
-// Cards específicas de KPI (Dashboard)
-.kpi-card {
+.canvas-container{
+    border: 2px dashed #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: $white;
     text-align: center;
-    padding: 1.5rem 1rem;
-
-    
-
-    
+    margin-bottom: 1rem;
+}
 }
 
 /* ==========================================================================
-   6. FORMULARIOS INDUSTRIALES (Inputs, Switches, Accordion)
+   7. PERFIL TECNICO
    ========================================================================== */
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header-img-container{
+        width: 100px;
+        height: 100px;
+        margin-top: 0.5rem;
+        .header-img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: $transition;
+            &:hover {
+                transform: scale(1.05);
+            }
+    }
+    }
+}
+ .performance-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+.grid-performance{
+    .completed-services, .times-efficiency{
+        text-align: center;
+        height: 100%;
 
-.form-industrial {
+    }
+}
+.options-container{
+    overflow: hidden;
+    .options-list__item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.session-close{
+    .close-button{
+        width: 100%;
+        background-color: $white;
+        &:hover {
+            background-color:$brand-red;
+            color: $white;
+    }
+}
+}
     
-    // Inputs y Selects más grandes para dedos con guantes o sucios
-    .form-control{
-        border: 2px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-        transition: $transition;
-        background-color: #fafbfc;
-
-        &:focus {
-            //border-color: $navy-light;
-            box-shadow: 0 0 0 3px rgba($navy-dark, 0.1);
-            background-color: $white;
-        }
-    }
-
-    label {
-        font-weight: 600;
-        color: $navy-dark;
-        margin-bottom: 0.4rem;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    // Switches personalizados (Checkboxes tipo iOS)
-    .form-switch {
-        .form-check-input {
-            width: 3rem;
-            height: 1.5rem;
-            cursor: pointer;
-            
-            &:checked {
-                background-color: $navy-dark;
-                border-color: $navy-dark;
-            }
-        }
-        .form-check-label {
-            margin-left: 0.5rem;
-            padding-top: 0.2rem;
-            cursor: pointer;
-            text-transform: none; // Anulamos el uppercase aquí para mejor lectura
-            font-size: 1rem;
-        }
-    }
-}
-
-// Acordeón de la Hoja de Trabajo
-.accordion-industrial {
-    .accordion-item {
-        border: none;
-        margin-bottom: 0.5rem;
-        border-radius: $border-rad !important;
-        @include shadow-sm;
-        overflow: hidden;
-
-        .accordion-button {
-            background-color: $white;
-            color: $navy-dark;
-            font-weight: 700;
-            padding: 1.2rem;
-            
-            &:not(.collapsed) {
-                background-color: $navy-dark;
-                color: $white;
-                
-                i { color: $warning-gold !important; }
-                
-                &::after {
-                    filter: brightness(0) invert(1); // Hace la flechita blanca
-                }
-            }
-
-            &:focus { box-shadow: none; }
-        }
-
-        .accordion-body {
-            background-color: $bg-light;
-            padding: 1.5rem;
-        }
-    }
-}
-
 /* ==========================================================================
    7. UTILIDADES ESPECÍFICAS
    ========================================================================== */
