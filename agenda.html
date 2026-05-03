@@ -10,78 +10,118 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-industrial sticky-top">
+<header>
+     <nav class="navbar navbar-expand-lg navbar-industrial">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-calendar-week me-2"></i> MI AGENDA
+            <a class="navbar-brand text-uppercase" href="index.html">
+                <i class="bi bi-calendar-week me-2"></i> mi agenda
             </a>
         </div>
     </nav>
+</header>
 
-    <div class="container py-4">
+
+<main class="container py-4">
         
-        <ul class="nav nav-pills mb-4 nav-fill custom-pills" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-hoy-tab" type="button">Hoy (2)</button>
+    <nav class="calendar-nav mb-4">
+        <ul class="nav-days nav navbar-expand-lg" id="pills-tab" role="tablist">
+            <li class="nav-item " role="presentation">
+                <a class="nav-link active " id="pills-hoy-tab" role="tab" aria-selected="true" aria-label="Ver servicios de hoy" href="#">
+                    Hoy (2)
+                </a>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-muted" id="pills-manana-tab" type="button">Mañana (1)</button>
+                <a class="nav-link " id="pills-manana-tab" role="tab" aria-selected="false" aria-label="Ver servicios de mañana" href="#">
+                    Mañana (1)
+                </a>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link text-muted" id="pills-pendientes-tab" type="button">Pendientes</button>
+                <a class="nav-link " id="pills-pendientes-tab" role="tab" aria-selected="false" aria-label="Ver servicios pendientes" href="#">
+                    Pendientes
+                </a>
             </li>
         </ul>
+    </nav> <!-- Fin de navegación por días -->
 
-        <div class="row g-3">
-            
-            <div class="col-12">
-                <a href="detalle-servicio.html" class="text-decoration-none text-dark">
-                    <div class="card card-custom p-3 border-start border-danger border-5 position-relative">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <span class="badge bg-danger mb-1">CORRECTIVO - URGENTE</span>
-                                <h5 class="fw-bold mb-1">Alkosto - Planta 2</h5>
-                                <p class="text-muted mb-1 small"><i class="bi bi-truck me-1"></i> Toyota 8FGCU25</p>
+    <section class="services">
+            <article class="service-card shadow">
+                <a href="detalle-servicio.html" class="text-decoration-none text-dark" aria-label="Ver detalles del servicio">
+                        <div class=" service-info card card-custom p-2 border-start border-danger border-5">
+                            <div class="service-info__customer">
+                                <span class="badge bg-danger mb-1 text-uppercase">correctivo</span>
+                                <h5 class="fw-bold mb-1">Alkosto</h5>
+                                <p class="text-muted mb-1 small mb-0">
+                                    cra 9  cll26 vda bojaca
+                                </p>
+                                <p class="text-muted mb-1 small">
+                                    <i class="bi bi-truck me-1" aria-hidden="true"></i>
+                                    Toyota
+                                </p>
                             </div>
-                            <div class="text-end">
+                            <div class="service-info__time text-end align-self-center">
                                 <h6 class="text-danger fw-bold mb-1">08:00 AM</h6>
-                                <i class="bi bi-chevron-right text-muted mt-2"></i>
+                                <i class="bi bi-chevron-right text-muted mt-2" aria-hidden="true"></i>
                             </div>
                         </div>
-                    </div>
+                    
                 </a>
-            </div>
+            </article>
 
-            <div class="col-12">
-                <a href="detalle-servicio.html" class="text-decoration-none text-dark">
-                    <div class="card card-custom p-3 border-start border-primary border-5 position-relative">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <span class="badge bg-primary mb-1">PREVENTIVO 250H</span>
-                                <h5 class="fw-bold mb-1">Fresenius Medical Care</h5>
-                                <p class="text-muted mb-1 small"><i class="bi bi-truck me-1"></i> Crown RC 5500</p>
+            <article class="service-card shadow">
+                <a href="detalle-servicio.html" class="text-decoration-none text-dark" aria-label="Ver detalles del servicio">
+                        <div class=" service-info card card-custom p-2 border-start border-primary border-5">
+                            <div class="service-info__customer">
+                                <span class="badge bg-primary mb-1 text-uppercase">Preventivo</span>
+                                <h5 class="fw-bold mb-1">Alkosto</h5>
+                                <p class="text-muted mb-1 small mb-0">
+                                    cra 9  cll26 vda bojaca
+                                </p>
+                                <p class="text-muted mb-1 small">
+                                    <i class="bi bi-truck me-1" aria-hidden="true"></i>
+                                    Toyota
+                                </p>
                             </div>
-                            <div class="text-end">
-                                <h6 class="text-primary fw-bold mb-1">14:00 PM</h6>
-                                <i class="bi bi-chevron-right text-muted mt-2"></i>
+                            <div class="service-info__time text-end align-self-center">
+                                <h6 class="text-primary fw-bold mb-1">11:00 AM</h6>
+                                <i class="bi bi-chevron-right text-muted mt-2" aria-hidden="true"></i>
                             </div>
                         </div>
-                    </div>
                 </a>
-            </div>
+            </article>
 
-        </div>
-    </div>
+            <article class="service-card shadow">
+                <a href="detalle-servicio.html" class="text-decoration-none text-dark" aria-label="Ver detalles del servicio">
+                        <div class=" service-info card card-custom p-2 border-start border-success border-5">
+                            <div class="service-info__customer">
+                                <span class="badge bg-success mb-1 text-uppercase">Diagnostico</span>
+                                <h5 class="fw-bold mb-1">Sika</h5>
+                                <p class="text-muted mb-1 small mb-0">
+                                    cra 9  cll26 vda bojaca
+                                </p>
+                                <p class="text-muted mb-1 small">
+                                    <i class="bi bi-truck me-1" aria-hidden="true"></i>
+                                    Toyota
+                                </p>
+                            </div>
+                            <div class="service-info__time text-end align-self-center">
+                                <h6 class="text-success fw-bold mb-1">2:00 PM</h6>
+                                <i class="bi bi-chevron-right text-muted mt-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    
+                </a>
+            </article>
+    </section>
+</main>
 
-    <div class="d-lg-none py-4"></div>
-    <footer class=" footer container-fluid d-lg-none">
+<footer class=" footer container-fluid">
         <section class="footer-icons-container">
             <a href="index.html" class=" text-muted text-center text-decoration-none">
                 <i class=" bi bi-house fs-3"></i><br>
                 <p class="paragraph__icon">Inicio</p>
             </a>
 
-            <a href="agenda.html" class=" icon__index text-decoration-none">
+            <a href="agenda.html" class=" icon__index text-decoration-none text-center">
                 <i class="bi bi-calendar3-fill fs-3"></i><br>
                 <p class="paragraph__icon">Agenda</p>
             </a>
@@ -91,7 +131,7 @@
                 <p class="paragraph__icon">Perfil</p>
             </a>
         </section>
-    </footer>
+</footer>
 
 
 </body>

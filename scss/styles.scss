@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     .client-report{
-        border: 1px solid red;
+        
         &__title{
             text-transform:capitalize;
             font-size: 0.9rem;
@@ -543,16 +543,47 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 }
-    
 /* ==========================================================================
-   7. UTILIDADES ESPECÍFICAS
+   7. Agenda
    ========================================================================== */
 
-
-.badge-status {
-    padding: 0.4em 0.8em;
-    border-radius: 4px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-size: 0.75rem;
+.calendar-nav{
+  .nav-days{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    .nav-item{
+        background-color: $white;
+        .nav-link{
+            color: $navy-dark;
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            transition: $transition;
+            &:hover, &.active {
+                background-color: $navy-dark;
+                color: $white;
+            }
+        }
+    }
 }
+}
+
+.services{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    .service-card{
+        .service-info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
