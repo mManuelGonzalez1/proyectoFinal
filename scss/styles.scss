@@ -100,6 +100,9 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         width:120px;
         justify-content: flex-end;
+        @media (min-width: 700px) {
+            justify-content: space-between;
+        }
         //En media quiery toc cambiar el justify content
         &__img{
             border-radius: 50%;
@@ -571,7 +574,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services{
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 2rem;
