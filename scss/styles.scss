@@ -1,119 +1,12 @@
-/* ==========================================================================
-   1. VARIABLES Y CONFIGURACIÓN BASE
-   ========================================================================== */
-
-// Paleta de Colores
-$navy-dark:    #141f35;
-//$navy-light:   lighten($navy-dark, 15%);
-$brand-red:    #ca2418;
-//$red-hover:    darken($brand-red, 10%);
-$warning-gold: #e9b41a;
-$bg-light:     #f4f6f9;
-$white:        #ffffff;
-$text-main:    #2b2b2b;
-$text-muted:   #6c757d;
+@use "variables"; // Importamos las variables desde _variables.scss
+@use "mixins";    // Importamos los mixins desde _mixins.scss
+@use "base";      // Importamos los estilos base desde _base.scss
 
 
-// Tipografía y Bordes
-$font-family:  'Segoe UI', system-ui, -apple-system, sans-serif;
-$border-rad:   12px;
-$transition:   all 0.3s ease;
-
-/* ==========================================================================
-   2. MIXINS (Funciones reutilizables)
-   ========================================================================== */
-
-@mixin shadow-sm {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-@mixin shadow-md {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ==========================================================================
-   3. ESTILOS GLOBALES
-   ========================================================================== */
-
-body {
-    background-color: $bg-light;
-    font-family: $font-family;
-    color: $text-main;
-    -webkit-font-smoothing: antialiased;
-    height: 1000px;
-    
-    // Espacio extra al final para que la barra inferior móvil no tape el contenido
-    @media (max-width: 1291px) {
-        //padding-bottom: 80px; 
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: $navy-dark;
-    font-weight: 700;
-}
-
-/* ==========================================================================
-   4. COMPONENTES DE NAVEGACIÓN
-   ========================================================================== */
-
-// Navbar Superior
-.navbar{
-    padding:  1rem 1rem 1rem 1.5rem;
-    position: sticky;
-    right: 0;
-    top: 0px;
-    background-color: $navy-dark;
-    @include shadow-md;
-    z-index: 2;
-    .navbar-brand {
-        color: $white;
-        font-size: 1.25rem;
-        letter-spacing: 0.5px;
-        i { 
-            color: $warning-gold; 
-        }
-    }
-
-    .nav-link {
-        //color: rgba($white, 0.8) !important;
-        transition: $transition;
-        
-        &:hover, &.active {
-            color: $warning-gold !important;
-        }
-    }
-    .navbar-brand__title{
-        text-transform: uppercase;
-    }
-
-    .profile-container{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        align-items: center;
-        width:120px;
-        justify-content: flex-end;
-        @media (min-width: 700px) {
-            justify-content: space-between;
-        }
-        //En media quiery toc cambiar el justify content
-        &__img{
-            border-radius: 50%;
-            border: 1px solid $white;
-        }
-    }
-}
 
 .progress-container{
     &__title{
-        color: $navy-dark;
+        color: variables.$navy-dark;
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
@@ -123,44 +16,26 @@ h1, h2, h3, h4, h5, h6 {
     .bar-container{
 
         &__percentage{
-        color: #e9b41a;
+        color: variables.$warning-gold;
     }
 
     }
     .progress{
         .progress-bar{
-            background-color: #e9b41a;
+            background-color: variables.$warning-gold;
         }
     }
 }
 
-.card-custom {
-    background: $white;
-    border: none;
-    border-radius: $border-rad;
-    @include shadow-sm;
-    transition: $transition;
-    overflow: hidden;
-    // Efecto al tocar la card en celular
-    &:active {
-        //background-color: darken($white, 2%);
-        transform: scale(0.98);
-    }
-    
 
-    // Variantes de bordes para estados (Urgente, Preventivo, etc.)
-    &.border-status-danger { border-left: 6px solid $brand-red; }
-    &.border-status-warning { border-left: 6px solid $warning-gold; }
-    &.border-status-navy { border-left: 6px solid $navy-dark; }
-}
 
 .progress-custom {
     height: 12px;
     border-radius: 6px;
-    background-color: #e2e8f0;
+    background-color: variables.$bg-light;
     
     .progress-bar {
-        background-color: $warning-gold;
+        background-color: variables.$warning-gold;
         border-radius: 6px;
     }
 }
@@ -172,20 +47,20 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         &__icon{
         font-size: 2.2rem;
-        color: $navy-dark;
+        color: variables.$navy-dark;
         margin-bottom: 0.5rem;
         }
         &__number{
         font-size: 2rem;
         font-weight: 800;
-        color: $navy-dark;
+        color: variables.$navy-dark;
         line-height: 1;
         margin-bottom: 0.2rem;
 
         }
         &__text{
         font-size: 0.85rem;
-        color: $text-muted;
+        color: variables.$text-muted;
         text-transform: uppercase;
         font-weight: 600;
         text-decoration: none;
@@ -208,10 +83,9 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2rem;
         margin-bottom: 2rem;
         &__information{
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
+           @include mixins.display-flex(flex,row,space-between,start);
             margin-bottom: 1rem;
+            gap: 0;
         }
         .information__badge{
             font-size: 0.7rem;
@@ -230,10 +104,10 @@ h1, h2, h3, h4, h5, h6 {
 
     }
     .fork-identification{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 75%;
+       @include mixins.display-flex(flex,row,space-between,center);
+        width: 100%;
+        text-align: center;
+        gap: 0;
         .identification__serial{
             font-weight: bold;
         }
@@ -248,78 +122,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.btn-brand {
-    background-color: $brand-red;
-    color: $white;
-    font-weight: 700;
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: $transition;
-    @include shadow-sm;
-    
-    &:hover, &:focus {
-        //background-color: $red-hover;
-        color: $white;
-        transform: translateY(-2px);
-        @include shadow-md;
-    }
 
-    &:active {
-        transform: translateY(0); // Efecto de presionar
-    }
-}
-
-
-.footer{
-    display: flex;
-    flex-direction: row;
-    background-color:$bg-light;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    @include shadow-md;
-    .footer-icons-container{
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 0 auto;
-        padding: 1rem 0;
-
-    }
-    .icon__index{
-        color: $brand-red;
-    }
-
-    i {
-        font-size: 1.5rem;
-        margin-bottom: 2px;
-        transition: transform 0.2s;        
-    }
-    .paragraph__icon {
-         font-size: 0.75rem;
-        font-weight: 500;
-    }
-
-        
-}
 
 // DETALLE DE SERVICIO 
 .contact-card{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include mixins.display-flex(flex,row,left,center);
     text-align: left;
-    justify-content:left;
     margin-bottom: 2rem;
-    border-bottom: 1px solid $navy-dark;
+    border-bottom: 1px solid variables.$navy-dark;
 }
 .person-contact{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content:space-between;
+    @include mixins.display-flex(flex,row,space-between,center);
         max-width: 250px;
         margin-bottom: 1rem;
     }
@@ -327,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
     .contact__phone{
         font-weight: bold;
-        color: $navy-dark;
+        color: variables.$navy-dark;
     }
 
 }
@@ -340,9 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
     border-radius: 15px;
     .alert-container{
-        display: flex;
-        flex-direction: row;
-        justify-content:left;
+        @include mixins.display-flex(flex,row,left,center);
         width: 100%;
         margin: 0;
         .alert-heading{
@@ -372,8 +183,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
     margin-bottom: 1rem;
     .information-legend{
-        color: $navy-dark;
-        border-bottom: 2px solid $navy-dark;
+        color: variables.$navy-dark;
+        border-bottom: 2px solid variables.$navy-dark;
         width: fit-content;
         padding-bottom: 0.5rem;
     }
@@ -383,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1rem;
             .service-type__label{
                 font-size: 0.9rem;
-                color: $navy-dark;
+                color: variables.$navy-dark;
                 font-weight: 600;
                 margin-bottom: 0.4rem;
                 text-transform: uppercase;
@@ -393,12 +204,12 @@ h1, h2, h3, h4, h5, h6 {
                 border-radius: 8px;
                 padding: 0.75rem 1rem;
                 font-size: 1rem;
-                transition: $transition;
-                background-color:$bg-light;
+                transition: variables.$transition;
+                background-color: variables.$bg-light;
                 &:focus {
-                    //border-color: $navy-light;
-                    box-shadow: 0 0 0 3px rgba($navy-dark, 0.1);
-                    background-color: $white;
+                    //border-color: variables.$navy-light;
+                    box-shadow: 0 0 0 3px rgba(variables.$navy-dark, 0.1);
+                    background-color: variables.$white;
                 }
 
             }
@@ -410,18 +221,18 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 8px;
         padding: 0.75rem 1rem;
         font-size: 1rem;
-        transition: $transition;
+        transition: variables.$transition;
         background-color: #fafbfc;
 
         &:focus {
-            //border-color: $navy-light;
-            box-shadow: 0 0 0 3px rgba($navy-dark, 0.1);
-            background-color: $white;
+            //border-color: variables.$navy-light;
+            box-shadow: 0 0 0 3px rgba(variables.$navy-dark, 0.1);
+            background-color: variables.$white;
         }
     }
     label {
         font-weight: 600;
-        color: $navy-dark;
+        color: variables.$navy-dark;
         margin-bottom: 0.4rem;
         font-size: 0.9rem;
         text-transform: uppercase;
@@ -435,8 +246,8 @@ h1, h2, h3, h4, h5, h6 {
             cursor: pointer;
             
             &:checked {
-                background-color: $navy-dark;
-                border-color: $navy-dark;
+                background-color: variables.$navy-dark;
+                border-color: variables.$navy-dark;
             }
         }
         .form-check-label {
@@ -452,21 +263,21 @@ h1, h2, h3, h4, h5, h6 {
     .accordion-item {
         border: none;
         margin-bottom: 0.5rem;
-        border-radius: $border-rad !important;
-        @include shadow-sm;
+        border-radius: variables.$border-rad !important;
+        @include mixins.shadow-sm;
         overflow: hidden;
 
         .accordion-button {
-            background-color: $white;
-            color: $navy-dark;
+            background-color: variables.$white;
+            color: variables.$navy-dark;
             font-weight: 700;
             padding: 1.2rem;
             
             &:not(.collapsed) {
-                background-color: $navy-dark;
-                color: $white;
+                background-color: variables.$navy-dark;
+                color: variables.$white;
                 
-                i { color: $warning-gold !important; }
+                i { color: variables.$warning-gold !important; }
                 
                 &::after {
                     filter: brightness(0) invert(1); // Hace la flechita blanca
@@ -477,7 +288,7 @@ h1, h2, h3, h4, h5, h6 {
         }
 
         .accordion-body {
-            background-color: $bg-light;
+            background-color: variables.$bg-light;
             padding: 1.5rem;
         }
     }
@@ -486,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px dashed #e2e8f0;
     border-radius: 8px;
     padding: 1.5rem;
-    background-color: $white;
+    background-color: variables.$white;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -496,9 +307,7 @@ h1, h2, h3, h4, h5, h6 {
    7. PERFIL TECNICO
    ========================================================================== */
 .profile-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mixins.display-flex(flex,column,center,center);
     .header-img-container{
         width: 100px;
         height: 100px;
@@ -507,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            transition: $transition;
+            transition: variables.$transition;
             &:hover {
                 transform: scale(1.05);
             }
@@ -515,9 +324,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
  .performance-title{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    @include mixins.display-flex(flex,row,left,center);
         gap: 0.5rem;
     }
 .grid-performance{
@@ -530,19 +337,16 @@ h1, h2, h3, h4, h5, h6 {
 .options-container{
     overflow: hidden;
     .options-list__item{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include mixins.display-flex(flex,row,space-between,center);
     }
 }
 .session-close{
     .close-button{
         width: 100%;
-        background-color: $white;
+        background-color: variables.$white;
         &:hover {
-            background-color:$brand-red;
-            color: $white;
+            background-color:variables.$brand-red;
+            color: variables.$white;
     }
 }
 }
@@ -552,21 +356,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .calendar-nav{
   .nav-days{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include mixins.display-flex(flex,row,space-between,center);
     gap: 0.5rem;
     .nav-item{
-        background-color: $white;
+        background-color: variables.$white;
         .nav-link{
-            color: $navy-dark;
+            color: variables.$navy-dark;
             border-radius: 10px;
             font-weight: 600;
             padding: 0.5rem 1rem;
-            transition: $transition;
+            transition: variables.$transition;
             &:hover, &.active {
-                background-color: $navy-dark;
-                color: $white;
+                background-color: variables.$navy-dark;
+                color: variables.$white;
             }
         }
     }
@@ -580,9 +382,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
     .service-card{
         .service-info{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            @include mixins.display-flex(flex,row,space-between,center);
         }
     }
 }

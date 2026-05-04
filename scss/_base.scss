@@ -1,0 +1,139 @@
+@use "variables"; // Importamos las variables desde _variables.scss
+@use "mixins";    // Importamos los mixins desde _mixins.scss
+
+
+body {
+    background-color:variables.$bg-light;
+    font-family: variables.$font-family;
+    color: variables.$text-main;
+    -webkit-font-smoothing: antialiased;
+    height: 1000px;
+    
+    // Espacio extra al final para que la barra inferior móvil no tape el contenido
+    @media (max-width: 1291px) {
+        //padding-bottom: 80px; 
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: variables.$navy-dark;
+    font-weight: 700;
+}
+.navbar{
+    padding:  1rem 1rem 1rem 1.5rem;
+    position: sticky;
+    right: 0;
+    top: 0px;
+    background-color: variables.$navy-dark;
+    @include mixins.shadow-md;
+    z-index: 2;
+    .navbar-brand {
+        color: variables.$white;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        i { 
+            color: variables.$warning-gold; 
+        }
+    }
+
+    .nav-link {
+        //color: rgba($white, 0.8) !important;
+        transition: variables.$transition;
+        
+        &:hover, &.active {
+            color: variables.$warning-gold !important;
+        }
+    }
+    .navbar-brand__title{
+        text-transform: uppercase;
+    }
+
+    .profile-container{
+        @include mixins.display-flex(flex,row,flex-end,center);
+        text-align: center;
+        width:120px;
+        gap: 0;
+        @media (min-width: 700px) {
+            justify-content: space-between;
+        }
+        //En media quiery toc cambiar el justify content
+        &__img{
+            border-radius: 50%;
+            border: 1px solid variables.$white;
+        }
+    }
+}
+.card-custom {
+    background: variables.$white;
+    border: none;
+    border-radius: variables.$border-rad;
+    @include mixins.shadow-sm;
+    transition: variables.$transition;
+    overflow: hidden;
+    // Efecto al tocar la card en celular
+    &:active {
+        //background-color: darken(variables.$white, 2%);
+        transform: scale(0.98);
+    }
+    
+
+    // Variantes de bordes para estados (Urgente, Preventivo, etc.)
+    &.border-status-danger { border-left: 6px solid variables.$brand-red; }
+    &.border-status-warning { border-left: 6px solid variables.$warning-gold; }
+    &.border-status-navy { border-left: 6px solid variables.$navy-dark; }
+}
+
+.btn-brand {
+    background-color: variables.$brand-red;
+    color: variables.$white;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: variables.$transition;
+    @include mixins.shadow-sm;
+    
+    &:hover, &:focus {
+        //background-color: variables.$red-hover;
+        color: variables.$white;
+        transform: translateY(-2px);
+        @include mixins.shadow-md;
+    }
+
+    &:active {
+        transform: translateY(0); // Efecto de presionar
+    }
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: variables.$bg-light;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    @include mixins.shadow-md;
+    .footer-icons-container{
+        width: 80%;
+        @include mixins.display-flex(flex,row,space-around,center);
+        margin: 0 auto;
+        padding: 1rem 0;
+
+    }
+    .icon__index{
+        color: variables.$brand-red;
+    }
+
+    i {
+        font-size: 1.5rem;
+        margin-bottom: 2px;
+        transition: transform 0.2s;        
+    }
+    .paragraph__icon {
+         font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+        
+}
