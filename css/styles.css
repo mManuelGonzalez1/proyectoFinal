@@ -2,6 +2,12 @@
 /* ==========================================================================
    1. VARIABLES Y CONFIGURACIÓN BASE
    ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #f4f6f9;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -216,9 +222,9 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 50%;
   text-align: center;
-  gap: 0;
+  gap: 1rem;
 }
 .asigned-container .fork-identification .identification__serial {
   font-weight: bold;
@@ -400,9 +406,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* ==========================================================================
-   7. PERFIL TECNICO
-   ========================================================================== */
 .profile-header {
   display: flex;
   flex-direction: column;
@@ -456,9 +459,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   7. Agenda
-   ========================================================================== */
 .calendar-nav .nav-days {
   display: flex;
   flex-direction: row;

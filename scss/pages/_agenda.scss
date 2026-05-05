@@ -1,0 +1,36 @@
+@use "../variables";
+@use "../mixins";
+
+
+.calendar-nav{
+  .nav-days{
+    @include mixins.display-flex(flex,row,space-between,center);
+    gap: 0.5rem;
+    .nav-item{
+        background-color: variables.$white;
+        .nav-link{
+            color: variables.$navy-dark;
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            transition: variables.$transition;
+            &:hover, &.active {
+                background-color: variables.$navy-dark;
+                color: variables.$white;
+            }
+        }
+    }
+}
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    .service-card{
+        .service-info{
+            @include mixins.display-flex(flex,row,space-between,center);
+        }
+    }
+}

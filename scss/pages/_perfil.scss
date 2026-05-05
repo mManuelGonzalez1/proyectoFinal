@@ -1,0 +1,47 @@
+@use "../variables";
+@use "../mixins";
+
+.profile-header{
+    @include mixins.display-flex(flex,column,center,center);
+    .header-img-container{
+        width: 100px;
+        height: 100px;
+        margin-top: 0.5rem;
+        .header-img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: variables.$transition;
+            &:hover {
+                transform: scale(1.05);
+            }
+    }
+    }
+}
+ .performance-title{
+    @include mixins.display-flex(flex,row,left,center);
+        gap: 0.5rem;
+    }
+.grid-performance{
+    .completed-services, .times-efficiency{
+        text-align: center;
+        height: 100%;
+
+    }
+}
+.options-container{
+    overflow: hidden;
+    .options-list__item{
+        @include mixins.display-flex(flex,row,space-between,center);
+    }
+}
+.session-close{
+    .close-button{
+        width: 100%;
+        background-color: variables.$white;
+        &:hover {
+            background-color:variables.$brand-red;
+            color: variables.$white;
+    }
+}
+}
