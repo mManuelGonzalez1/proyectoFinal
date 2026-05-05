@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil Técnico</title>
+    <title>Perfil del tecnico de mantenimiento | Overhaul Service</title>
+    <meta name="description" content="Perfil de los técnicos donde podran ver su rendimiento en el mes y configuraciones de la cuenta">
+    <meta name="keywords" content="servicio técnico, mantenimiento industrial, gestión de órdenes">
+    <meta name="author" content="Overhaul Service">
+    <meta name="robots" content="noindex, nofollow">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -12,39 +16,39 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-industrial sticky-top">
         <div class="container-fluid justify-content-center">
-            <p class="navbar-brand mb-0 h1 text-uppercase">mi perfil</p>
+            <h1 class="navbar-brand mb-0 h1 text-uppercase">mi perfil</h1>
         </div>
     </nav>
 </header>
     
 <main class="container py-4">
-    
+    <h1 class="visually-hidden">Perfil del Técnico</h1>
     <!-- Perfil del Técnico -->
     <section class="profile-header  mb-4">
         <div class=" header-img-container  p-1 shadow-sm mb-3">
             <img src="https://ui-avatars.com/api/?name=Manuel+G&background=141f35&color=fff&size=100" class=" header-img" alt="Foto de perfil tecnico">
         </div>
-        <h3 class="profile-header__name fw-bold mb-0">Manuel</h3>
+        <h2 class="profile-header__name fw-bold mb-0">Manuel</h2>
         <p class=" profile-header__job text-muted">Técnico de Mantenimiento Nivel 2</p>
     </section>
 
     <!-- Rendimiento del Técnico -->
     <section class="performance mb-4">
         <div class="performance-title">
-                <h6 class=" title fw-bold text-secondary mb-3 text-uppercase">Rendimiento</h6>
+                <h3 class=" title fw-bold text-secondary mb-3 text-uppercase">Rendimiento</h3>
                 <p class=" month text-muted">(Abril)</p>
         </div>
     <!--Grid rendimiento tecnico-->
         <div class="grid-performance row g-3">
             <div class="col-6 mt-0 p-0">
                 <div class="completed-services card card-custom p-3">
-                    <h2 class=" number fw-bold text-success mb-0">42</h2>
+                    <h4 class="number fw-bold text-success mb-0">42</h4>
                     <p class="text text-muted">Servicios Completados</p>
                 </div>
             </div>
             <div class="col-6 mt-0 p-0">
                 <div class=" times-efficiency card card-custom p-3 text-center h-100">
-                    <h2 class="number fw-bold text-primary mb-0">98%</h2>
+                    <h4 class="number fw-bold text-primary mb-0">98%</h4>
                     <p class="text text-muted">Eficiencia en Tiempos</p>
                 </div>
             </div>
@@ -53,27 +57,27 @@
 
     <!-- Ajustes del Técnico -->
     <section class="settings mb-4">
-        <h6 class="fw-bold text-secondary mb-3 text-uppercase">Ajustes</h6>
+        <h3 class="fw-bold text-secondary mb-3 text-uppercase">Ajustes</h3>
         <!-- Lista de opcciones para configuración -->
         <div class=" options-container card card-custom">
             <ul class=" options-list list-group list-group-flush">
                 <li class="options-list__item list-group-item py-3">
-                    <p><i class="bi bi-person-gear me-3 text-muted"></i>Editar Datos Personales</p>
-                    <i class="bi bi-chevron-right text-muted"></i>
+                    <p><i class="bi bi-person-gear me-3 text-muted" aria-hidden="true"></i>Editar Datos Personales</p>
+                    <i class="bi bi-chevron-right text-muted" aria-hidden="true"></i>
                 </li>
 
                 <li class="options-list__item list-group-item py-3">
-                    <p><i class="bi bi-person-gear me-3 text-muted"></i>Cambiar Contraseña</p>
-                    <i class="bi bi-chevron-right text-muted"></i>
+                    <p><i class="bi bi-person-gear me-3 text-muted" aria-hidden="true"></i>Cambiar Contraseña</p>
+                    <i class="bi bi-chevron-right text-muted" aria-hidden="true"></i>
                 </li>
 
                  <li class="options-list__item list-group-item py-3">
-                    <p><i class="bi bi-person-gear me-3 text-muted"></i>Preferencias de comunicación</p>
-                    <i class="bi bi-chevron-right text-muted"></i>
+                    <p><i class="bi bi-person-gear me-3 text-muted" aria-hidden="true"></i>Preferencias de comunicación</p>
+                    <i class="bi bi-chevron-right text-muted" aria-hidden="true"></i>
                 </li>
 
                  <li class="options-list__item list-group-item py-3">
-                    <p><i class="bi bi-person-gear me-3 text-muted"></i>Notificaciones</p>
+                    <p><i class="bi bi-person-gear me-3 text-muted" aria-hidden="true"></i>Notificaciones</p>
                     <div class="form-check form-switch m-0">
                         <input class="form-check-input" type="checkbox" id="notifications-switch" checked aria-label="Activar notificaciones">
                     </div>
@@ -85,8 +89,8 @@
 
     <!-- Botón de Cerrar Sesión -->
     <section class=" session-close mb-1 p-2">
-        <button class=" close-button btn btn-outline-danger btn-lg py-3 " type="button">
-            <i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión
+        <button class="close-button btn btn-outline-danger btn-lg py-3" type="button" aria-label=" boton Cerrar sesión">
+            <i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i> Cerrar Sesión
         </button>
     </section>
 
@@ -94,18 +98,18 @@
 
 <footer class=" footer container-fluid">
         <section class="footer-icons-container">
-            <a href="index.html" class=" text-muted text-center text-decoration-none">
-                <i class=" bi bi-house fs-3"></i><br>
+            <a href="index.html" class=" text-muted text-center text-decoration-none" aria-label="Ir a la página de inicio">
+                <i class=" bi bi-house fs-3" aria-hidden="true"></i><br>
                 <p class="paragraph__icon">Inicio</p>
             </a>
 
-            <a href="agenda.html" class="text-center text-decoration-none text-muted">
-                <i class="bi bi-calendar3 fs-3"></i><br>
+            <a href="agenda.html" class="text-center text-decoration-none text-muted" aria-label="Ir a la página de agenda">
+                <i class="bi bi-calendar3 fs-3" aria-hidden="true"></i><br>
                 <p>Agenda</p>
             </a>
 
-            <a href="perfil.html" class=" icon__index text-center text-decoration-none">
-                <i class="bi bi-person-fill fs-3"></i><br>
+            <a href="perfil.html" class=" icon__index text-center text-decoration-none" aria-label="Ir a la página de perfil" aria-current="page">
+                <i class="bi bi-person-fill fs-3" aria-hidden="true"></i><br>
                 <p>Perfil</p>
             </a>
         </section>

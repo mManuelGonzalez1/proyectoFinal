@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Básico -->
     <title>Panel Técnico - Gestión de Servicios | Overhaul Service</title>
     <meta name="description" content="Panel técnico para gestión de órdenes de servicio. Visualiza servicios asignados, pendientes y tu rendimiento diario.">
     <meta name="keywords" content="servicio técnico, mantenimiento industrial, gestión de órdenes">
@@ -11,6 +14,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    
     <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
@@ -18,154 +26,157 @@
 <header>
     <nav class="navbar navbar-industrial">
         <div class="container-fluid p-0 flex-nowrap">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="bi bi-tools fs-4 me-4"></i> 
+            <a class="navbar-brand d-flex align-items-center" href="#" aria-label="Ir al inicio del panel técnico">
+                <i class="bi bi-tools fs-4 me-4" aria-hidden="true"></i> 
                 <p class="navbar-brand__title mb-0">Servicio técnico</p>
             </a>
             <div class="profile-container">
                 <p class="text-white mb-0 d-none d-sm-inline">M. García</p>
-                <img class="profile-container__img" src="https://ui-avatars.com/api/?name=Manuel+G&background=ca2418&color=fff&size=36" alt="Perfil">
+                <img class="profile-container__img" src="https://ui-avatars.com/api/?name=Manuel+G&background=ca2418&color=fff&size=36" alt="Foto de perfil de Manuel García" loading="lazy" width="36" height="36">
             </div>
         </div>
-    </nav><!--Listo aprobado-->
+    </nav>
 </header>
     
-<main class="container py-4">
+<main id="main-content" class="container py-4">
+        
+        <h1 class="visually-hidden">Panel Técnico - Overhaul Service</h1>
         
         <section class="progress-container mb-4">
-                <h3 class="progress-container__title ">Hola, Manuel</h3>
+                <h2 class="progress-container__title">Hola, Manuel</h2>
                 <p class="progress-container__text text-muted mb-2">Este es el resumen operativo de hoy</p>
-                <div class="bar-container card-custom p-3 shadow-sm ">
+                <div class="bar-container card-custom p-3 shadow-sm">
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <p class="bar-container__daily-progress text-secondary">Progreso Diario de Jornada</p>
                         <p class=" bar-container__percentage fw-bold">60%</p>
                     </div>
-                    <div class="progress ">
+                    <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 60%"></div>
                     </div>
                 </div> 
-        </section> <!--Aprobado-->
+        </section>
 
         <section class="summary-container row g-3 mb-4">
-            <div class="col-6 col-md-4" >
-                 <div class=" card-container   card-custom border-status-warning ">
-                    <i class=" card-container__icon bi-check-circle"></i>
-                    <div class=" card-container__number ">4</div>
-                    <a class=" card-container__text  text-decoration-none" href="#programados" >Servicios Hoy</a>
+            <h2 class="visually-hidden">Resumen de Servicios</h2>
+            <div class="col-6 col-md-4">
+                 <div class="card-container card-custom border-status-warning ">
+                    <i class="card-container__icon bi-check-circle" aria-hidden="true"></i>
+                    <div class="card-container__number">4</div>
+                    <a class="card-container__text  text-decoration-none" href="#programados" >Servicios Hoy</a>
                 </div>
             </div>
                
             
             <div class="col-6 col-md-4">
                 <div class="card-container card-custom border-status-danger">
-                    <i class=" card-container__icon bi-clock-history  text-danger"></i>
+                    <i class="card-container__icon bi-clock-history  text-danger" aria-hidden="true"></i>
                     <div class="card-container__number text-danger">2</div>
                     <a class="card-container__text" href="#pendientes">Pendientes</a>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="card-container card-custom border-status-navy">
-                    <i class="card-container__icon bi bi-speedometer "></i>
+                    <i class="card-container__icon bi bi-speedometer" aria-hidden="true"></i>
                     <div class="card-container__number">6.5h</div>
                     <div class="card-container__text">Horas Laboradas</div>
                 </div>
             </div>
-        </section><!--Aprobado,falta solamente el anclaje de links en pendientes-->
+        </section>
 
         
             <section class="asigned-container col-12" >
-                <h6 class=" asigned-container__title text-muted">Siguiente Servicio Asignado</h6>
+                <h3 class=" asigned-container__title text-muted">Siguiente Servicio Asignado</h3>
 
-                <article class=" schedule card card-custom shadow " id="programados">
-                    <div class=" schedule__information ">
+                <article class="schedule card card-custom shadow" id="programados">
+                    <div class="schedule__information">
                         <div>
                             <span class="information__badge badge bg-danger rounded-pill  px-3 py-2 text-uppercase fw-bold">urgente</span>
                             <h4 class="information__title mb-1">Alkosto - Planta 2</h4>
-                            <p class=" information__adress mb-0 small">
-                                <i class="bi bi-geo-alt me-1"></i> Calle 170 #12-50 - Zona de Descargue</p>
+                            <p class="information__adress mb-0 small">
+                                <i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Calle 170 #12-50 - Zona de Descargue</p>
                         </div>
-                        <i class=" schedule__icon bi-truck fs-1 text-muted"></i>
+                        <i class="schedule__icon bi-truck fs-1 text-muted" aria-hidden="true"></i>
                     </div>
                     
                     <div class="forklift bg-light  rounded mb-3">
                         <div class="forklift-information col-12 col-sm-6 mb-2 mb-sm-0">
                             <p class="forklift-information__title d-block uppercase small-text mb-0">Modelo de Equipo</p>
                             <div class="fork-identification">
-                            <i class="bi bi-tag-fill me-1 text-secondary"></i> 
+                            <i class="bi bi-tag-fill me-1 text-secondary" aria-hidden="true"></i> 
                             <p class="identification__brand mb-0">Toyota</p>
                             <p class="identification__model mb-0">8FGCU25</p>
                             <p class="identification__serial mb-0">H8FGCU25</p>
                             </div> 
                         </div>
                         <div class="client-report col-12 col-sm-6">
-                            <small class=" client-report__title text-muted">Reporte del Cliente</small>
-                            <span class=" client-report__report fw-bold text-danger"><i class="bi bi-ear-fill me-1"></i> Ruidos en sistema hidráulico</span>
+                            <small class="client-report__title text-muted">Reporte del Cliente</small>
+                            <span class="client-report__report fw-bold text-danger"><i class="bi bi-ear-fill me-1" aria-hidden="true"></i> Ruidos en sistema hidráulico</span>
                         </div>
                     </div>
 
-                    <a href="detalle-servicio.html" class="btn btn-brand w-100 fs-5 py-3 shadow">
-                        VER DETALLES DE ORDEN <i class="bi bi-arrow-right-circle ms-2"></i>
+                    <a href="detalle-servicio.html" class="btn btn-brand w-100 fs-5 py-3 shadow" aria-label="Ver detalles completos de la orden de servicio de Alkosto">
+                        VER DETALLES DE ORDEN <i class="bi bi-arrow-right-circle ms-2" aria-hidden="true"></i>
                     </a>
-                </article><!--Aprobado-->
+                </article>
             </section>
 
-            <section class="asigned-container col-12" >
-                <h6 class=" asigned-container__title text-muted"> Servicios Pendientes</h6>
+            <section class="asigned-container col-12">
+                <h3 class=" asigned-container__title text-muted"> Servicios Pendientes</h3>
 
-                <article class=" schedule card card-custom shadow " id="pendientes">
-                    <div class=" schedule__information ">
+                <article class="schedule card card-custom shadow " id="pendientes">
+                    <div class="schedule__information">
                         <div>
                             <span class="information__badge badge bg-danger rounded-pill  px-3 py-2 text-uppercase fw-bold">urgente</span>
                             <h4 class="information__title mb-1">Alkosto - Planta 2</h4>
-                            <p class=" information__adress mb-0 small">
-                                <i class="bi bi-geo-alt me-1"></i> Calle 170 #12-50 - Zona de Descargue</p>
+                            <p class="information__adress mb-0 small">
+                                <i class="bi bi-geo-alt me-1" aria-hidden="true"></i> Calle 170 #12-50 - Zona de Descargue</p>
                         </div>
-                        <i class=" schedule__icon bi-truck fs-1 text-muted"></i>
+                        <i class="schedule__icon bi-truck fs-1 text-muted" aria-hidden="true"></i>
                     </div>
                     
                     <div class="forklift bg-light  rounded mb-3">
                         <div class="forklift-information col-12 col-sm-6 mb-2 mb-sm-0">
                             <p class="forklift-information__title d-block uppercase small-text mb-0">Modelo de Equipo</p>
                             <div class="fork-identification">
-                            <i class="bi bi-tag-fill me-1 text-secondary"></i> 
+                            <i class="bi bi-tag-fill me-1 text-secondary" aria-hidden="true"></i> 
                             <p class="identification__brand mb-0">Toyota</p>
                             <p class="identification__model mb-0">8FGCU25</p>
                             <p class="identification__serial mb-0">H8FGCU25</p>
                             </div> 
                         </div>
                         <div class="client-report col-12 col-sm-6">
-                            <small class=" client-report__title text-muted">Reporte del Cliente</small>
-                            <span class=" client-report__report fw-bold text-danger"><i class="bi bi-ear-fill me-1"></i> Ruidos en sistema hidráulico</span>
+                            <small class="client-report__title text-muted">Reporte del Cliente</small>
+                            <span class="client-report__report fw-bold text-danger"><i class="bi bi-ear-fill me-1" aria-hidden="true"></i> Ruidos en sistema hidráulico</span>
                         </div>
                     </div>
 
-                    <a href="detalle-servicio.html" class="btn btn-brand w-100 fs-5 py-3 shadow">
-                        VER DETALLES DE ORDEN <i class="bi bi-arrow-right-circle ms-2"></i>
+                    <a href="detalle-servicio.html" class="btn btn-brand w-100 fs-5 py-3 shadow" aria-label="Ver detalles completos de la orden de servicio de Alkosto">
+                        VER DETALLES DE ORDEN <i class="bi bi-arrow-right-circle ms-2" aria-hidden="true"></i>
                     </a>
-                </article><!--Aprobado-->
+                </article>
             </section>
         
 </main>
     
-<footer class=" footer container-fluid">
+<footer class="footer container-fluid">
         <section class="footer-icons-container">
-            <a href="index.html" class=" icon__index text-center text-decoration-none">
-                <i class=" bi bi-house-fill fs-3"></i><br>
+            <a href="index.html" class=" icon__index text-center text-decoration-none" aria-label="Ir a la página de inicio" aria-current="page">
+                <i class="bi bi-house-fill fs-3" aria-hidden="true"></i><br>
                 <p class="paragraph__icon">Inicio</p>
             </a>
 
-            <a href="agenda.html" class="text-center text-decoration-none text-muted">
-                <i class="bi bi-calendar3 fs-3"></i><br>
+            <a href="agenda.html" class="text-center text-decoration-none text-muted" aria-label="Ir a la agenda de servicios">
+                <i class="bi bi-calendar3 fs-3" aria-hidden="true"></i><br>
                 <p>Agenda</p>
             </a>
 
-            <a href="perfil.html" class="text-center text-decoration-none text-muted">
-                <i class="bi bi-person fs-3"></i><br>
+            <a href="perfil.html" class="text-center text-decoration-none text-muted" aria-label="Ir al perfil del técnico">
+                <i class="bi bi-person fs-3" aria-hidden="true"></i><br>
                 <p>Perfil</p>
             </a>
         </section>    
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
