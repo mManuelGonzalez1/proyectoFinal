@@ -571,7 +571,7 @@ Proyecto propietario de Manuel Felipe Gonzalez Acuña para **Overhaul Service Co
 
 | Propiedad | Valor |
 |-----------|-------|
-| **Desarrollador** | Manuel García |
+| **Desarrollador** | Manuel Felipe Gonzalez Acuña |
 | **Empresa** | Overhaul Service Corp |
 | **Versión** | 1.0.0 |
 | **Última Actualización** | Mayo 6, 2026 |
