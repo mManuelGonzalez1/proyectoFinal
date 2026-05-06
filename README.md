@@ -563,7 +563,7 @@ index.html (📊 Panel Principal)
 
 ## 📄 Licencia
 
-Proyecto propietario de Manuel García para **Overhaul Service Corp**
+Proyecto propietario de Manuel Felipe Gonzalez Acuña para **Overhaul Service Corp**
 
 ---
 
