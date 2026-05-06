@@ -1,0 +1,13 @@
+# 1. Dependencias (La más importante)
+node_modules/
+
+# 2. Archivos de compilación de Sass
+.sass-cache/
+*.css.map
+
+# 3. Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# 4. Archivos de configuración de entorno (por si luego usas API Keys)
+.env

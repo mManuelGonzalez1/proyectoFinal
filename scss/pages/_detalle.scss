@@ -2,7 +2,7 @@
 @use '../mixins';
 
 .contact-card{
-    @include mixins.display-flex(flex,row,left,center);
+    @include mixins.display-flex(flex,row,flex-start,center);
     text-align: left;
     margin-bottom: 2rem;
     border-bottom: 1px solid variables.$navy-dark;
@@ -29,7 +29,7 @@
     margin-bottom: 2rem;
     border-radius: 15px;
     .alert-container{
-        @include mixins.display-flex(flex,row,left,center);
+        @include mixins.display-flex(flex,row,flex-start,center);
         width: 100%;
         margin: 0;
         .alert-heading{

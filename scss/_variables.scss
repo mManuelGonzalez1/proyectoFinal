@@ -7,9 +7,22 @@ $brand-red:#ca2418;
 $warning-gold: #e9b41a;
 $bg-light: #f4f6f9;
 $white:#ffffff;
+$success-green: rgb(40, 167, 69);
 $text-main:#2b2b2b;
 $text-muted:#6c757d;
+
 // Tipografía y Bordes
 $font-family:  'Segoe UI', system-ui, -apple-system, sans-serif;
 $border-rad:   12px;
 $transition:   all 0.3s ease;
+
+//Personalizacion variables boostrap
+$primary:$navy-dark;   //  Azul Noche
+$danger: $brand-red;   //  Rojo
+$warning: $warning-gold;   // Amarillo
+$body-bg: $bg-light;   // Fondo de la app
+$success: $success-green;  //verde
+$text-muted: $text-muted; // Texto suave
+
+// 3. IMPORTAR BOOTSTRAP DESDE NODE_MODULES
+@import "../node_modules/bootstrap/scss/bootstrap";

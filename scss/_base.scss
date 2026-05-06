@@ -12,11 +12,11 @@ body {
     font-family: variables.$font-family;
     color: variables.$text-main;
     -webkit-font-smoothing: antialiased;
-    height: 1000px;
+    min-height: 100vh;
     
     // Espacio extra al final para que la barra inferior móvil no tape el contenido
     @media (max-width: 1291px) {
-        //padding-bottom: 80px; 
+        
     }
 }
 
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .nav-link {
-        //color: rgba($white, 0.8) !important;
+        color: variables.$white;
         transition: variables.$transition;
         
         &:hover, &.active {
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
     @include mixins.shadow-sm;
     
     &:hover, &:focus {
-        //background-color: variables.$red-hover;
+        background-color: variables.$brand-red;
         color: variables.$white;
         transform: translateY(-2px);
         @include mixins.shadow-md;

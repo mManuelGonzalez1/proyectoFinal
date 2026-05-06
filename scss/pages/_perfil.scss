@@ -19,7 +19,7 @@
     }
 }
  .performance-title{
-    @include mixins.display-flex(flex,row,left,center);
+    @include mixins.display-flex(flex,row,flex-start,center);
         gap: 0.5rem;
     }
 .grid-performance{
